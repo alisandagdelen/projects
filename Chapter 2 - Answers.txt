@@ -1,0 +1,14 @@
+--Question 1
+select lname || ', ' || fname "Employee Name", salary from Employee;
+
+--Question 2
+select * from employee where commission is null;
+
+--Question 3
+select fname, lname, salary from employee where employeeid=111; --initial salary
+update employee set salary=salary*1.10 where employeeid=111;
+select fname, lname, salary from employee where employeeid=111; --updated salary
+
+--Question 4
+update employee set deptid=null where deptid=30; --need to update existing deptid values for referential integrity
+delete from dept where deptid=30;
